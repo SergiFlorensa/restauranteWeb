@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'FuenteTitulo';
+    src: url('./Fonts/Kidstshirt.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .font-fuenteTitulo {
+    font-family: 'FuenteTitulo', sans-serif;
+  }
+  
+
+
+  @font-face {
+    font-family: 'FuenteDescripcion';
+    src: url('./Fonts/LTCushion-Medium.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .font-FuenteDescripcion {
+    font-family: 'FuenteDescripcion', sans-serif;
+  }
+  
+  .shadow-3d {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
