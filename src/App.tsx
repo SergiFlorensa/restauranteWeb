@@ -48,7 +48,12 @@ const ChefCard = () => (
 
 
 
-const Card = ({ title, content }) => (
+interface CardProps {
+  title: string;
+  content: string;
+}
+
+const Card: React.FC<CardProps> = ({ title, content }) => (
   <div className="relative overflow-hidden w-full sm:w-80 h-60 rounded-3xl cursor-pointer text-2xl font-bold bg-red-900">
     <div className="z-10 absolute w-full h-full peer"></div>
     <div className="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] -top-32 -left-16 w-32 h-44 rounded-full bg-black transition-all duration-500"></div>
