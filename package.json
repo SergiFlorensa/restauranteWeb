@@ -31,11 +31,5 @@
     "tailwindcss": "^3.4.4",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
-  },
-  "homepage": "https://sergiflorensa.github.io/restauranteWeb/",
-  "main": "index.tsx",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sergiflorensa/restauranteWeb.git"
   }
 }
