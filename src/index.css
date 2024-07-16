@@ -36,3 +36,13 @@
     background-color: rgba(0, 0, 0, 0.5); /* Aquí el último valor (0.5) indica la opacidad */
   }
   
+  .carousel-item {
+    height: 400px; /* Altura inicial para pantallas mayores a 648px */
+  }
+  
+  @media (max-width: 648px) {
+    .carousel-item {
+      height: 300px; /* Altura ajustada para pantallas menores o iguales a 648px */
+    }
+  }
+  

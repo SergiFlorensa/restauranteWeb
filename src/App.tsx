@@ -2,7 +2,7 @@ import logo from './assets/LOGO.png';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import img1 from './assets/portadarest.jpg';
-import img2 from './assets/portadarest2.jpg';
+import img2 from './assets/carrusel4.jpg';
 import img3 from './assets/fondofuego.jpg';
 import chefImage from './assets/chef.jpg'; // Importar la imagen del chef
 import Logoins from './assets/logo-instagram.svg';
@@ -243,8 +243,9 @@ function App() {
       
       <main className="p-0">
 
-      <div className=" ">
+      <div className="carousel-container">
       <Carousel showThumbs={false} infiniteLoop autoPlay>
+        
         <div>
           <img src={img1} alt="Imagen 1" className="h-full w-full object-cover" />
         </div>
@@ -257,12 +258,12 @@ function App() {
       </Carousel>
     </div>
 
-        <div className="py-8 flex justify-center mt-8 items-center">
+        <div className="py-3 flex justify-center mt-3 items-center">
           <h1 className="text-8xl font-bold text-black text-center font-fuenteTitulo">Patio criollo</h1>
         </div>
 
 
-        <div className="px-8 text-center m-6 flex justify-center items-center">
+        <div className="px-8 text-center mb-8 flex justify-center items-center text-justify">
           <p className="text-lg text-gray-800 font-FuenteDescripcion">
           "Patio Criollo" evoca la tradición y la autenticidad de la cocina criolla, una fusión de sabores y técnicas culinarias que reflejan la rica herencia cultural de Latinoamérica. La palabra "Patio" remite a un espacio familiar y acogedor, donde se comparten momentos especiales alrededor de una buena comida. Por otro lado, "Criollo" se refiere a lo nativo, lo autóctono, representando las raíces profundas y arraigadas de la gastronomía local.
           </p>
@@ -270,7 +271,7 @@ function App() {
 
 
 
-        <div className="flex justify-center items-center mt-8">
+        <div className="flex justify-center items-center mt-3">
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-8 mx-4 ">
             <Card title="El concepto" content="" />
             <Card title="El equipo" content="" />
@@ -282,7 +283,7 @@ function App() {
 
 
 
-        <div className="flex justify-center items-center mt-8 bg-slate-300">
+        <div className="flex justify-center items-center mt-8">
           <div className="w-full sm:w-1/2 px-4">
             <ChefCard />
           </div>
@@ -334,7 +335,7 @@ function App() {
         </div>
 
 
-        <div className="flex flex-col h-full p-3 w-40 dark:bg-amber-200 dark:text-gray-800 font-FuenteDescripcion mb-4">
+        <div className="flex flex-col h-full p-3 w-40 dark:bg-amber-200 dark:text-gray-800 font-FuenteDescripcion mb-14">
 	<div className="space-y-3">
 		<div className="flex-1">
 			<ul className="pt-2 pb-4 space-y-1 text-sm">
