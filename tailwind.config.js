@@ -9,8 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
+        'black-transparent': 'rgba(0, 0, 0, 0.2)', // Ajusta el valor alpha según necesites
+
         maroon: {
           900: '#4B0000', // Granate oscuro
+          
         },
       },
     },

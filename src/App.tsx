@@ -1,8 +1,8 @@
 import logo from './assets/LOGO.png';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import img1 from './assets/fondofuego.jpg';
-import img2 from './assets/fondofuego.jpg';
+import img1 from './assets/portadarest.jpg';
+import img2 from './assets/portadarest2.jpg';
 import img3 from './assets/fondofuego.jpg';
 import chefImage from './assets/chef.jpg'; // Importar la imagen del chef
 import Logoins from './assets/logo-instagram.svg';
@@ -15,6 +15,7 @@ import image3 from './assets/empanadillas.jpg';
 import image4 from './assets/entraña1-2.jpg';
 import image5 from './assets/pulpoparri.jpg';
 import image6 from './assets/carpaccio.jpg';
+import madera from './assets/madera.png';
 
 
 
@@ -23,25 +24,11 @@ const ChefCard = () => (
   <div className="bg-gray-800 text-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 hover:shadow-2xl hover:bg-black transition-all duration-500 ease-in-out">
     <div className="md:flex">
       <div className="p-8">
-        <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Hola!</div>
+        <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Chef</div>
         <p className="block mt-1 text-lg leading-tight font-medium text-white">Pablo Valenzuela</p>
         <p className="mt-2 text-gray-400">Con más de 15 años de experiencia en la gastronomía argentina, el Chef Pablo Valenzuela combina técnicas tradicionales con un toque contemporáneo para ofrecer platos únicos y memorables en Patio Criollo.</p>
       </div>
-      <div className="flex items-center justify-between mt-4 space-x-4">
-        <button className="text-red-500 hover:text-white" style={{ marginRight: '20px' }}>
-          <svg id="heart" viewBox="0 0 47.5 47.5" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <clipPath id="a">
-                <path d="M0 38h38V0H0v38Z"></path>
-              </clipPath>
-            </defs>
-            <g transform="matrix(1.25 0 0 -1.25 0 47.5)" clipPath="url(#a)">
-              <path d="M36.885 25.166c0 5.45-4.418 9.868-9.867 9.868-3.308 0-6.227-1.633-8.018-4.129-1.79 2.496-4.71 4.129-8.017 4.129-5.45 0-9.868-4.418-9.868-9.868 0-.772.098-1.52.266-2.241C2.752 14.413 12.216 5.431 19 2.965c6.783 2.466 16.249 11.448 17.617 19.96.17.721.268 1.469.268 2.241" fill="#be1931"></path>
-            </g>
-          </svg>
-          Like
-        </button>
-      </div>
+      
     </div>
   </div>
 );
@@ -54,17 +41,25 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ title, content }) => (
-  <div className="relative overflow-hidden w-full sm:w-80 h-60 rounded-3xl cursor-pointer text-2xl font-bold bg-red-900">
-    <div className="z-10 absolute w-full h-full peer"></div>
-    <div className="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] -top-32 -left-16 w-32 h-44 rounded-full bg-black transition-all duration-500"></div>
-    <div className="absolute flex text-xl text-center items-end justify-end peer-hover:right-0 peer-hover:rounded-b-none peer-hover:bottom-0 peer-hover:items-center peer-hover:justify-center peer-hover:w-full peer-hover:h-full -bottom-32 -right-16 w-36 h-44 rounded-full bg-black transition-all duration-500">
+  <div
+  className="relative overflow-hidden w-full sm:w-80 h-60 rounded-3xl cursor-pointer text-2xl font-bold text-white font-FuenteDescripcion"
+  style={{
+    backgroundImage: `url(${madera})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  }}
+>
+  <div className="z-10 absolute w-full h-full peer"></div>
+  <div className="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] -top-32 -left-16 w-32 h-44 rounded-full bg-black-transparent transition-all duration-500"></div>
+    <div className="absolute flex text-xl text-center items-end justify-end peer-hover:right-0 peer-hover:rounded peer-hover:bottom-0 peer-hover:items-center peer-hover:justify-center peer-hover:w-full peer-hover:h-full -bottom-32 -right-16 w-36 h-44 rounded-full bg-black-transparent transition-all duration-500">
       {content}
-    </div>
-    <div className="w-full h-full items-center justify-center flex uppercase">
-      {title}
-    </div>
   </div>
+  <div className="w-full h-full items-center justify-center flex uppercase p-2">
+    {title}
+  </div>
+</div>
 );
+
 
 
 const data = [
@@ -94,22 +89,22 @@ const data = [
 
 
 const InfoSection = () => (
-  <div className="flex justify-center mt-4 text-center">
+  <div className="flex justify-center mt-4 text-center font-FuenteDescripcion">
     <div className="flex flex-col lg:flex-row items-start w-full lg:w-2/3 justify-center">
       <div className="w-full lg:w-1/1 p-4 bg-gray-100 border-r border-gray-300 shadow-3d">
         <h2 className="text-3xl font-bold text-black mb-4 font-FuenteDescripcion">INFORMACIÓN GENERAL</h2>
-        <ul className="text-lg text-gray-800 font-FuenteDescripcion">
+        <ul className="text-lg text-gray-800 ">
           <li className="mb-2">
-            <strong className="text-gray-400 font-FuenteDescripcion">Cocina</strong> <br></br> moderna, Mediterránea
+            <strong className="text-gray-400 ">Cocina</strong> <br></br> moderna, Mediterránea
           </li>
           <li className="mb-2">
-            <strong className="text-gray-400 font-FuenteDescripcion">Tipo de Negocio:</strong> <br></br>Cocina argentina y vinos
+            <strong className="text-gray-400 ">Tipo de Negocio:</strong> <br></br>Cocina argentina y vinos
           </li>
           <li className="mb-2">
-            <strong className="text-gray-400 font-FuenteDescripcion">Servicios:</strong> <br></br>Acceso a Discapacitados, Privatización, Acceso WiFi
+            <strong className="text-gray-400 ">Servicios:</strong> <br></br>Acceso a Discapacitados, Privatización, Acceso WiFi
           </li>
           <li className="mb-2">
-            <strong className="text-gray-400 font-FuenteDescripcion">Métodos de Pago:</strong> <br></br>Sin contacto, Efectivo, Visa, Tarjeta de Crédito
+            <strong className="text-gray-400 ">Métodos de Pago:</strong> <br></br>Sin contacto, Efectivo, Visa, Tarjeta de Crédito
           </li>
         </ul>
       </div>
@@ -247,24 +242,27 @@ function App() {
       </header>
       
       <main className="p-0">
-        <Carousel showThumbs={false} infiniteLoop autoPlay className="h-50">
-          <div>
-            <img src={img1} alt="Imagen 1" className="h-full w-full object-cover" />
-          </div>
-          <div>
-            <img src={img2} alt="Imagen 2" className="h-full w-full object-cover" />
-          </div>
-          <div>
-            <img src={img3} alt="Imagen 3" className="h-full w-full object-cover" />
-          </div>
-        </Carousel>
 
-        <div className="py-8 flex justify-center">
+      <div className=" ">
+      <Carousel showThumbs={false} infiniteLoop autoPlay>
+        <div>
+          <img src={img1} alt="Imagen 1" className="h-full w-full object-cover" />
+        </div>
+        <div>
+          <img src={img2} alt="Imagen 2" className="h-full w-full object-cover" />
+        </div>
+        <div>
+          <img src={img3} alt="Imagen 3" className="h-full w-full object-cover" />
+        </div>
+      </Carousel>
+    </div>
+
+        <div className="py-8 flex justify-center mt-8 items-center">
           <h1 className="text-8xl font-bold text-black text-center font-fuenteTitulo">Patio criollo</h1>
         </div>
 
 
-        <div className="px-8 text-center">
+        <div className="px-8 text-center m-6 flex justify-center items-center">
           <p className="text-lg text-gray-800 font-FuenteDescripcion">
           "Patio Criollo" evoca la tradición y la autenticidad de la cocina criolla, una fusión de sabores y técnicas culinarias que reflejan la rica herencia cultural de Latinoamérica. La palabra "Patio" remite a un espacio familiar y acogedor, donde se comparten momentos especiales alrededor de una buena comida. Por otro lado, "Criollo" se refiere a lo nativo, lo autóctono, representando las raíces profundas y arraigadas de la gastronomía local.
           </p>
@@ -272,7 +270,7 @@ function App() {
 
 
 
-        <div className="flex justify-center items-center mt-8 bg-stone-300">
+        <div className="flex justify-center items-center mt-8">
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-8 mx-4 ">
             <Card title="El concepto" content="" />
             <Card title="El equipo" content="" />
@@ -317,7 +315,7 @@ function App() {
             <img
               src={item.imageLink}
               alt={`Image ${index + 1}`}
-              className="w-full h-auto rounded-lg"
+              className="w-full h-full rounded-lg object-cover flex"
             />
           </div>
         ))}

@@ -31,3 +31,8 @@
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(0, 0, 0, 0.1);
   }
   
+
+  .transparent-black {
+    background-color: rgba(0, 0, 0, 0.5); /* Aquí el último valor (0.5) indica la opacidad */
+  }
+  
