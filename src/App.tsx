@@ -116,7 +116,7 @@ const InfoSection = () => (
           </li>
 
           <li className="mb-2">
-            <strong className="text-gray-400">Domingo </strong> Cerrado
+            <strong className="text-gray-400">Lunes y Martes </strong> Cerrado
           </li>
         </ul>
       </div>
