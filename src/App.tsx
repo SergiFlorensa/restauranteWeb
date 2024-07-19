@@ -18,15 +18,10 @@ import ElEspacio from './Pages/ElEspacio';
 import ElMenu from './Pages/ElMenu';
 import './index.css';
 
-
-
-
 function App() {
-
   
   return (
     <Router basename="/restauranteWeb">
-
       <Header />
       <main className="p-0 bg-beigePrincipal font-FuenteDescripcion">
         <Routes>
@@ -51,9 +46,7 @@ function App() {
         </Routes>
         <Footer />
       </main>
-      
     </Router>
   );
 }
-
 export default App;
