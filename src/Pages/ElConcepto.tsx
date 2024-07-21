@@ -1,21 +1,37 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
 import videoBack from '../assets/elConcepto.mp4';
-import volverAtras from '../assets/volverAtras.svg';
 
 const ElConcepto: React.FC = () => {
-    const navigate = useNavigate();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handleBackClick = () => {
-    navigate('/');
-  };
+
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        // Configuraciones para dispositivos móviles
+        video.setAttribute('playsinline', 'true');
+        video.setAttribute('muted', 'true');
+        video.setAttribute('autoplay', 'true');
+        video.play();
+      } else {
+        // Configuraciones para dispositivos no móviles
+        video.play();
+      }
+    }
+  }, []);
+
   return (
-    <div className="relative min-h-screen w-full overflow-y-auto ">
-      <video 
-        autoPlay
+    <div className="relative min-h-screen w-full overflow-y-auto">
+      <video
+        ref={videoRef}
+        autoPlay={!/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)} // No autoPlay en móviles
         loop
         muted
-        className="absolute inset-0 w-full h-full object-cover"
+        playsInline // Asegura que el video no se reproduzca en pantalla completa en algunos móviles
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src={videoBack} type="video/mp4" />
         Your browser does not support the video tag.
@@ -23,10 +39,7 @@ const ElConcepto: React.FC = () => {
 
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-    <div className='absolute top-4 left-4 z-20 p-2 rounded-full bg-white bg-opacity-40 transition duration-300 cursor-pointer' onClick={handleBackClick}>
-        <img src={volverAtras} className=' w-8 h-8'/>
-    </div>
-
+      
       <div className="relative z-10 flex flex-col items-center text-white p-8 space-y-8 font-fuenteDescripcion">
         <h1 className="text-4xl font-bold mb-4">El Concepto</h1>
         <p className="mt-4 text-lg mb-8 max-w-2xl text-center">
@@ -35,7 +48,7 @@ const ElConcepto: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto font-fuenteDescripcion">
           <div className="bg-gray-800 bg-opacity-70 p-6 rounded-lg shadow-lg">
-            <h2 className="text-3xl font-semibold mb-2 ">Raíces Argentinas</h2>
+            <h2 className="text-3xl font-semibold mb-2">Raíces Argentinas</h2>
             <p className="text-lg">
               Nuestra cocina está inspirada en las ricas tradiciones culinarias de Argentina. Desde los cortes de carne seleccionados hasta los métodos de cocción al fuego, cada detalle está pensado para ofrecer una experiencia auténtica.
             </p>
@@ -59,8 +72,6 @@ const ElConcepto: React.FC = () => {
             </p>
           </div>
         </div>
-
-        
       </div>
     </div>
   );
