@@ -1,7 +1,7 @@
 import React from 'react';
 
 const InfoSection: React.FC = () => (
-  <div className="flex justify-center mt-4 text-center font-FuenteDescripcion">
+  <div className="flex justify-center mt-20 text-center font-FuenteDescripcion">
     <div className="flex flex-col lg:flex-row items-start w-full lg:w-2/3 justify-center">
       <div className="w-full lg:w-1/2 p-4 bg-infoBack border-r border-gray-300 shadow-3d">
         <h2 className="text-3xl font-bold text-black mb-4">INFORMACIÓN GENERAL</h2>

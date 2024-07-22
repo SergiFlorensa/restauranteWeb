@@ -1,6 +1,6 @@
 const EspecialistasEnParrilla = () => {
   return (
-    <div className="w-full px-4 text-center justify-center mt-16 font-fuenteDescripcion">
+    <div className="w-full px-4 justify-center mt-16 font-fuenteDescripcion text-justify">
       {/* Título y descripción de Especialistas en parrilla */}
       <div className="text-center">
         <h2 className="text-4xl font-bold text-black font-FuenteDescripcion">ESPECIALISTAS EN PARRILLA</h2>
